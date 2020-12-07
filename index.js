@@ -83,7 +83,7 @@ else {
     $("body").css("background-image","url(images/background-" + backgroundRandomNumber + ".png)");
   },1000);
 //change h1
-  $("#level-title").text("Game Over, Press Any Key To Restart")
+  $("#level-title").text("Game Over, Click Here To Restart")
   startOver();
 }
 }
