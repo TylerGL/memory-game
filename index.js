@@ -25,7 +25,7 @@ if (backgroundRandomNumber === 1 || backgroundRandomNumber === 4){
 
 
 //start game funciton
-$(document).on("keydown click", function() {
+$("#level-title").on("click", function() {
   //!means true becomes false/false becomes true
   if (!started){
     //start the function
