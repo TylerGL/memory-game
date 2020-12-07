@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-repeat: repeat-y;
 }
 
 h3{
@@ -48,9 +49,8 @@ a:visited{
 
 .container {
   display: block;
-  width: 50%;
+  width: 75%;
   margin: auto;
-
 }
 
 .btn {
