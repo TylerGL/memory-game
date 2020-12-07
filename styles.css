@@ -47,6 +47,22 @@ a:visited{
   color: #000;
 }
 
+.green:hover{
+  border: 10px solid #6a9615;
+}
+
+.red:hover{
+  border: 10px solid #d3181f;
+}
+
+.yellow:hover{
+  border: 10px solid #f4c900;
+}
+
+.blue:hover{
+  border: 10px solid #095a91;
+}
+
 .container {
   display: block;
   width: 75%;
