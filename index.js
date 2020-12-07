@@ -9,6 +9,21 @@ var started = false;
 //starting level
 var level = 0;
 
+
+//random background generator
+//gen number 1-4
+var backgroundRandomNumber = Math.ceil(Math.random() * 4);
+//log number
+console.log(backgroundRandomNumber);
+//apply background based on number from selection background-1-4.png
+$("body").css("background-image","url(images/background-" + backgroundRandomNumber + ".png)");
+//change text colour based on background
+//if 1 OR 4 then change to white
+if (backgroundRandomNumber === 1 || backgroundRandomNumber === 4){
+  $("#level-title,h3,.foot-notes,a:link").css("color","#ffff")
+};
+
+
 //start game funciton
 $(document).keypress(function() {
   //!means true becomes false/false becomes true
@@ -19,6 +34,7 @@ $(document).keypress(function() {
     started = true;
   }
 });
+
 
 //game sequence
 function nextSequence() {
@@ -60,9 +76,11 @@ else {
   //sound
   playSound("wrong");
   //body change
+  $("body").css("background-image" , "none")
   $("body").addClass("game-over");
   setTimeout(function(){
     $("body").removeClass("game-over")
+    $("body").css("background-image","url(images/background-" + backgroundRandomNumber + ".png)");
   },1000);
 //change h1
   $("#level-title").text("Game Over, Press Any Key To Restart")
@@ -70,12 +88,14 @@ else {
 }
 }
 
+
 // restart the game changes these values to match the start of the game
 function startOver(){
   level=0;
   gamePattern = [];
   started = false;
 }
+
 
 //click function
 $(".btn").click(function() {
@@ -90,11 +110,13 @@ $(".btn").click(function() {
   checkAnswer(userClickedPattern.length-1);
 });
 
+
 //sound function
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 };
+
 
 //animation funciton
 function animatePress(currentColour) {
@@ -103,3 +125,9 @@ function animatePress(currentColour) {
     $("#" + currentColour).removeClass("pressed");
   }, 100);
 };
+
+
+//how to play dropdown
+$(".rules-drop").click(function(){
+  $(".game-rules").slideToggle();
+});

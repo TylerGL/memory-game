@@ -1,22 +1,49 @@
 body {
   text-align: center;
-  background-color: #011F3F;
 }
-P{
-  color:#FEF2BF;
+
+h3{
+  font-family: 'Press Start 2P', cursive;
+  color:#000;
+  font-size: 1.5rem;
+  line-height: 2;
 }
+
+p{
+  color:#000;
+}
+
+.game-rules{
+  display:none;
+  color:#000;
+  font-family:sans-serif;
+  margin:20px;
+  line-height: 2;
+}
+
+.game-rules span.game-text{
+    background-color: #ffff;
+}
+
+.footnotes{
+  color:#000;
+  font-size: .75rem;
+  line-height: 2;
+}
+
 a:link{
-  text-decoration: none;
-  color:#FEF2BF;
+  color:#000;
 }
+
 a:visited{
-  color:#FEF2BF;
+  color:#000;
 }
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin:  5%;
-  color: #FEF2BF;
+  color: #000;
 }
 
 .container {
@@ -37,26 +64,43 @@ a:visited{
 
 .game-over {
   background-color: red;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .red {
-  background-color: red;
+  background-image: url("images/pokemon-red.jpg");
+  background-position: center;
+  background-size: contain;
 }
 
 .green {
-  background-color: green;
+  background-image: url("images/pokemon-green.jpg");
+  background-position: center;
+  background-size: contain;
 }
 
 .blue {
-  background-color: blue;
+  background-image: url("images/pokemon-blue.jpg");
+  background-position: center;
+  background-size: contain;
 }
 
 .yellow {
-  background-color: yellow;
+  background-image: url("images/pokemon-yellow.jpg");
+  background-position: center;
+  background-size: contain;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.rules-drop{
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
